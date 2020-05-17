@@ -83,6 +83,10 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                     password.setError("Please enter your password");
                     password.requestFocus();
                 }
+                else if(pwd.length()<6){
+                    password.setError("Password must be more than 6 characters");
+                    password.requestFocus();
+                }
                 else  if(email.isEmpty() && pwd.isEmpty() && fname.isEmpty()&& lname.isEmpty()){
                     Toast.makeText(Register.this,"Fields Are Empty!",Toast.LENGTH_SHORT).show();
                 }
